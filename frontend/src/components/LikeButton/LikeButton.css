@@ -1,0 +1,35 @@
+.like__button {
+    width: 22px;
+    height: 19px;
+    border: none;
+    padding: 0;
+    margin-right: 20px;
+    background: transparent;
+    background-image: url("../../images/like.svg");
+    cursor: pointer;
+  }
+  .like__button:hover {
+    opacity: 0.5;
+  }
+  .like__button_active {
+    width: 22px;
+    height: 19px;
+    border: none;
+    padding: 0;
+    margin-right: 20px;
+    background: transparent;
+    background-image: url("../../images/union.svg");
+    cursor: pointer;
+  }
+  .like__counter {
+    margin: 0 0 0 6px;
+    width: 10px;
+    height: 13px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: black;
+  }
+  

@@ -1,0 +1,12 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+
+.page {
+    background-color: #000000;
+    font-family: "Inter", "Arial", sans-serif;
+    font-style: normal;
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 14px;
+}
