@@ -2,9 +2,6 @@
 class ApiAuth {
   constructor(options) {
     this._baseUrl = options.baseUrl;
-    this._headers = options.headers;
-    this._authorization = this._headers.authorization;
-    this._contenType = this._headers["Content-Type"];
   }
   _checkResponse(res) {
     return res.ok
@@ -15,17 +12,21 @@ class ApiAuth {
   signup(data) {
     return fetch(`${this._baseUrl}/signup`, {
       method: "POST",
-      headers: this._headers,
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         email: data.email,
         password: data.password,
       }),
     }).then(this._checkResponse);
   }
-  signin(data) {
+  signin(data, token) {
     return fetch(`${this._baseUrl}/signin`, {
       method: "POST",
-      headers: this._headers,
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         email: data.email,
         password: data.password,
