@@ -18,11 +18,11 @@ const Header = ({ name, userEmail, linkText }) => {
         <img className="header__image" src={logo} alt="Логотип Место" />
       </Link>
       {name === "signup" ? (
-        <Link to="/sign-in" className="header__link header__link_login">
+        <Link to="/signin" className="header__link header__link_login">
           {linkText}
         </Link>
       ) : name === "signin" ? (
-        <Link to="/sign-up" className="header__link header__link_login">
+        <Link to="/signup" className="header__link header__link_login">
           {linkText}
         </Link>
       ) : (
@@ -33,11 +33,7 @@ const Header = ({ name, userEmail, linkText }) => {
             }`}
           >
             <p className="header__email">{userEmail}</p>
-            <Link
-              to="/sign-in"
-              className="header__link"
-              onClick={handleSignOut}
-            >
+            <Link to="/signin" className="header__link" onClick={handleSignOut}>
               {linkText}
             </Link>
           </div>

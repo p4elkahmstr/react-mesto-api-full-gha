@@ -114,7 +114,7 @@ const App = () => {
         setIsResultPopupOpen(true);
         setSuccessful(true);
         resetInput();
-        navigate("/sign-in");
+        navigate("/signin");
       })
       .catch((err) => {
         setIsResultPopupOpen(true);
@@ -251,7 +251,7 @@ const App = () => {
           }
         />
         <Route
-          path="sign-in"
+          path="signin"
           element={
             <>
               <Header name="signin" linkText="Регистрация" />
@@ -260,7 +260,7 @@ const App = () => {
           }
         />
         <Route
-          path="sign-up"
+          path="signup"
           element={
             <>
               <Header name="signup" linkText="Вход" />
