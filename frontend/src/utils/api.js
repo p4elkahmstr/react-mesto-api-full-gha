@@ -85,7 +85,7 @@ class Api {
     }
   }
   const api = new Api({
-    baseUrl: "http://localhost:3000",
+    baseUrl: "http://mesto.pr15.nomoredomainsrocks.ru",
   });
   export default api;
   
