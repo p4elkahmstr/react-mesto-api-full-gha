@@ -9,27 +9,27 @@ class ApiAuth {
       : Promise.reject(`${res.status} ${res.statusText}`);
   }
 
-  signup(data) {
+  signup() {
     return fetch(`${this._baseUrl}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        email: data.email,
-        password: data.password,
+        email: email,
+        password: password,
       }),
     }).then(this._checkResponse);
   }
-  signin(data, token) {
+  signin() {
     return fetch(`${this._baseUrl}/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        email: data.email,
-        password: data.password,
+        email: email,
+        password: password,
       }),
     }).then(this._checkResponse);
   }
