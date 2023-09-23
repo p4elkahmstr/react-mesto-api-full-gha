@@ -87,7 +87,7 @@ const App = () => {
         setIsLoading(false);
       })
       .catch((err) => console.error(`Ошибка при загрузки данных: ${err}`));
-  }, []);
+  }, [loggedIn]);
 
   useEffect(() => {
     if (localStorage.token) {
@@ -135,7 +135,7 @@ const App = () => {
         setUserEmail(data.email);
         resetInput();
         setLoggedIn(true);
-        navigate("/home");
+        navigate("/");
       })
       .catch((err) => {
         setIsResultPopupOpen(true);

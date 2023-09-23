@@ -4,7 +4,7 @@ const {
   createCard, getCards, deleteCard, likeCard, dislikeCard,
 } = require('../controllers/cards');
 
-router.get('/home', getCards);
+router.get('/', getCards);
 
 const cardIdValidate = celebrate({
   params: Joi.object().keys({
