@@ -85,7 +85,7 @@ class Api {
     }
   }
   const api = new Api({
-    baseUrl: "http://mesto.pr15.nomoredomainsrocks.ru",
+    baseUrl: "http://api.mesto.pr15.nomoredomainsrocks.ru",
   });
   export default api;
   
