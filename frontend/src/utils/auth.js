@@ -38,8 +38,7 @@ class ApiAuth {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "GET",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
+        "Authorization": `Bearer ${token}`
       },
     }).then(this._checkResponse);
   }
