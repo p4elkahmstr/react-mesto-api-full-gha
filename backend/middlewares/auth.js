@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const { SECRET_KEY = 'some-secret-key' } = process.env;
+const { JWT_SECRET = 'some-secret-key' } = process.env;
 const UnauthorizedError = require('../errors/UnauthorizedError');
 
 module.exports = (req, res, next) => {
@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
   }
   const token = authorization.replace('Bearer ', '');
   try {
-    const payload = jwt.verify(token, SECRET_KEY, { expiresIn: '7d' });
+    const payload = jwt.verify(token, JWT_SECRET, { expiresIn: '7d' });
     req.user = payload;
     return next();
   } catch (err) {
