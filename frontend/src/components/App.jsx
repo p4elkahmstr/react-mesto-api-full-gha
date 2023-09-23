@@ -76,17 +76,19 @@ const App = () => {
   }, [isOpen, closeAllPopups]);
 
   useEffect(() => {
-    setIsLoading(true);
-    Promise.all([
-      api.getUserInfo(localStorage.token),
-      api.getCards(localStorage.token),
-    ])
-      .then(([dataUser, dataCards]) => {
-        setCurrentUser(dataUser);
-        setCards(dataCards);
-        setIsLoading(false);
-      })
-      .catch((err) => console.error(`Ошибка при загрузки данных: ${err}`));
+    if (loggedIn) {
+      setIsLoading(true);
+      Promise.all([
+        api.getUserInfo(localStorage.token),
+        api.getCards(localStorage.token),
+      ])
+        .then(([dataUser, dataCards]) => {
+          setCurrentUser(dataUser);
+          setCards(dataCards);
+          setIsLoading(false);
+        })
+        .catch((err) => console.error(`Ошибка при загрузки данных: ${err}`));
+    }
   }, [loggedIn]);
 
   useEffect(() => {
