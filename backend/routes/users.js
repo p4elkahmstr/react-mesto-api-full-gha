@@ -4,7 +4,7 @@ const {
   getUsers, getUserById, /* createUser, */ editUserData, editUserAvatar, getMe,
 } = require('../controllers/users');
 
-router.get('/', getUsers);
+router.get('/home', getUsers);
 
 router.get('/me', getMe);
 

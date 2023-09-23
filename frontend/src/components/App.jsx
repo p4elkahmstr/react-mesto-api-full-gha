@@ -135,7 +135,7 @@ const App = () => {
         setUserEmail(data.email);
         resetInput();
         setLoggedIn(true);
-        navigate("/");
+        navigate("/home");
       })
       .catch((err) => {
         setIsResultPopupOpen(true);
