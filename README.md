@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.46.150
+IP 158.160.46.150
 
 Frontend https://mesto.pr15.nomoredomainsrocks.ru
 
