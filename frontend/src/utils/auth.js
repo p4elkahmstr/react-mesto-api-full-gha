@@ -45,7 +45,7 @@ class ApiAuth {
   }
 }
 const apiAuth = new ApiAuth({
-  baseUrl: "http://api.mesto.pr15.nomoredomainsrocks.ru",
+  baseUrl: "https://api.mesto.pr15.nomoredomainsrocks.ru",
   headers: {
     "Content-Type": "application/json",
   },
