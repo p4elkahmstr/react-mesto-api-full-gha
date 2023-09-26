@@ -96,7 +96,7 @@ const App = () => {
       auth
         .getUsersMe(localStorage.token)
         .then((res) => {
-          setUserEmail(res.data.email);
+          setUserEmail(res.email);
           setLoggedIn(true);
           navigate("/");
         })

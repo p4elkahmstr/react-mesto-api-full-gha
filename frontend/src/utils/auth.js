@@ -38,13 +38,14 @@ class ApiAuth {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "GET",
       headers: {
-        "Authorization": `Bearer ${token}`
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
       },
     }).then(this._checkResponse);
   }
 }
 const apiAuth = new ApiAuth({
-  baseUrl: "http://api.mesto.pr15.nomoredomainsrocks.ru",
+  baseUrl: "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },
