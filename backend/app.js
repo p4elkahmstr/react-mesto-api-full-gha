@@ -12,6 +12,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/testdb' } = process.env;
 
+const urlRegex = /^https?:\/\/\S+/;
+
 const app = express();
 
 app.use(cors());
@@ -52,7 +54,7 @@ app.post('/signup', celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
     about: Joi.string().min(2).max(30),
-    avatar: Joi.string().uri({ scheme: ['http', 'https'] }),
+    avatar: Joi.string().regex(urlRegex),
     email: Joi.string().required().email(),
     password: Joi.string().required(),
   }),
