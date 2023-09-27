@@ -16,8 +16,8 @@ class ApiAuth {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: data.email,
         password: data.password,
+        email: data.email,
       }),
     }).then(this._checkResponse);
   }
