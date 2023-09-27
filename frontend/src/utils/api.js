@@ -6,7 +6,7 @@ class Api {
       return res.ok ? res.json() : Promise.reject;
     }
     getCards(token) {
-      return fetch(`${this._baseUrl}/cards`, {
+      return fetch(`${this._baseUrl}/cards/`, {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -14,7 +14,7 @@ class Api {
     }
   
     addCardByServer(data, token) {
-      return fetch(`${this._baseUrl}/cards`, {
+      return fetch(`${this._baseUrl}/cards/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +85,7 @@ class Api {
     }
   }
   const api = new Api({
-    baseUrl: "https://api.mesto.pr15.nomoredomainsrocks.ru",
+    baseUrl: "http://localhost:3000",
   });
   export default api;
   

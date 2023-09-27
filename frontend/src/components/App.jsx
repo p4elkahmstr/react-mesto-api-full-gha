@@ -83,7 +83,9 @@ const App = () => {
         api.getCards(localStorage.token),
       ])
         .then(([dataUser, dataCards]) => {
+          console.log(dataUser);
           setCurrentUser(dataUser);
+          console.log(dataCards);
           setCards(dataCards);
           setIsLoading(false);
         })
@@ -134,7 +136,9 @@ const App = () => {
       .signin(data)
       .then((res) => {
         localStorage.setItem("token", res.token);
+        console.log(data.email);
         setUserEmail(data.email);
+        console.log(userEmail);
         resetInput();
         setLoggedIn(true);
         navigate("/");
